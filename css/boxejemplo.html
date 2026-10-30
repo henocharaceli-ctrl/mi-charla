@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards (tarjetas)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /*definir variable*/
+        body {
+            background-color: rgba(235, 224, 224, 0.993);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgb(138, 26, 26);
+            max-width: 1000px;
+            margin: 0 auto;
+            /*top - bottom son 0px y auto para left y right*/
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .card {
+            background-color: white;
+            width: 360px;
+            text-align: center;
+            border: 7px solid rgb(197, 21, 21);
+            padding: 30px;
+        }
+
+        .card__imagen img {
+            width: 80px;
+            height: 80px;
+            padding: 10px;
+        }
+
+        .card__titulo {
+            font-size: medium;
+            color: black;
+        }
+
+        .card__parrafo {
+            font-size: medium;
+            line-height: 1.55;
+        }
+
+        .card__enlace {
+            background-color: rgba(194, 61, 61, 0.781);
+            padding: 10px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+
+        }
+
+        footer{
+            background-color: azure;
+        }
+
+        .footer-top{
+
+        }
+
+        .footer-bottom{
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="container"><!--container-->
+            <article class="card">
+                <!--imagen-->
+                <div class="card__imagen">
+                    <img src="./asset/img/logo.png" alt="">
+                </div>
+                <!--titulo-->
+                <h3 class="card__titulo">Modelo de cards</h3>
+                <!--párrafo-->
+                <p class="card__parrafo">Pequeño texto agregado sobre una cards que explica algo brevemente.</p>
+                <!--enlace-->
+                <a href="" class="card__enlace">COMPRAR</a>
+            </article>
+            <article class="card">
+                <!--imagen-->
+                <div class="card__imagen">
+                    <img src="./asset/img/logo.png" alt="">
+                </div>
+                <!--titulo-->
+                <h3 class="card__titulo">Modelo de cards</h3>
+                <!--párrafo-->
+                <p class="card__parrafo">Pequeño texto agregado sobre una cards que explica algo brevemente.</p>
+                <!--enlace-->
+                <a href="" class="card__enlace">COMPRAR</a>
+            </article>
+            <article class="card">
+                <!--imagen-->
+                <div class="card__imagen">
+                    <img src="./asset/img/logo.png" alt="">
+                </div>
+                <!--titulo-->
+                <h3 class="card__titulo">Modelo de cards</h3>
+                <!--párrafo-->
+                <p class="card__parrafo">Pequeño texto agregado sobre una cards que explica algo brevemente.</p>
+                <!--enlace-->
+                <a href="" class="card__enlace">COMPRAR</a>
+            </article>
+            <article class="card">
+                <!--imagen-->
+                <div class="card__imagen">
+                    <img src="./asset/img/logo.png" alt="">
+                </div>
+                <!--titulo-->
+                <h3 class="card__titulo">Modelo de cards</h3>
+                <!--párrafo-->
+                <p class="card__parrafo">Pequeño texto agregado sobre una cards que explica algo brevemente.</p>
+                <!--enlace-->
+                <a href="" class="card__enlace">COMPRAR</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>

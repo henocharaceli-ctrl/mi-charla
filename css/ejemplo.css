@@ -1,0 +1,23 @@
+.contenedor {
+    display: flex;
+}
+
+.caja {
+    padding: 15px;
+    border-radius: 10px;
+    width: 42px;
+    height: 20px;
+    text-align: center;
+}
+
+.uno {
+    background-color: antiquewhite;
+}
+
+.dos {
+    background-color: aqua;
+}
+
+.tres {
+    background-color: aquamarine;
+}

@@ -3,27 +3,38 @@
    Se escribe UNA sola vez, acá arriba. Todo lo demás usa var().
    ========================================================= */
 :root {
-    /* Los seis colores de la identidad de River */
-    --gris: #b1a7a6;
-    --rojo: #ba181b;
-    --blanco: #ffffff;
-    --negro: #0b090a;
+  /* Los seis colores de la identidad de River */
+  --gris: #b1a7a6;
+  --rojo: #ba181b;
+  --blanco: #ffffff;
+  --negro: #0b090a;
 
-    /* Escala del violeta */
-    --rojo-900: #2b0000;
-    --rojo-800: #4f0000;
-    --rojo-700: #740000;
-    --rojo-500: #980000;
-    --rojo-300: #b50000;
-    --rojo-200: #d30000;
-    --rojo-100: #eb1d1d;
-    --rojo-50: #f50f0f;
-    --rojo-25: #ff0000;
+  /* Escala del violeta */
+  --rojo-900: #2b0000;
+  --rojo-800: #4f0000;
+  --rojo-700: #740000;
+  --rojo-500: #980000;
+  --rojo-300: #b50000;
+  --rojo-200: #d30000;
+  --rojo-100: #eb1d1d;
+  --rojo-50: #f50f0f;
+  --rojo-25: #ff0000;
 
-    --texto: #9e2a2b;
-    --texto-suave: #ad2831;
-    --blanco: #ffffff;
+  --texto: #9e2a2b;
+  --texto-suave: #ad2831;
+  --blanco: #ffffff;
+  --violeta: var(--fusia);
+
+
+  /* la escala de espaciado del curso. Usá estos y ningún otro número. */
+  --e-1: .25rem;
+  --e-2: .5rem;
+  --e-3: 1rem;
+  --e-4: 1.5rem;
+  --e-5: 2rem;
+  --e-6: 3rem;
 }
+
 
 /* =========================================================
    2 · LA PÁGINA ENTERA
@@ -31,66 +42,409 @@
    en pantalla sin usar márgenes a ojo.
    ========================================================= */
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--gris);
-    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-    color: var(--texto);
+  margin: 0;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: var(--gris);
+  background-image: url(./asset/img/monumental.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10%;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  color: var(--texto);
 }
 
 /* =========================================================
    3 · LA TARJETA
    ========================================================= */
 .tarjeta {
-    background: var(--blanco);
-    border-top: 8px solid var(--rojo);
-    border-radius: 12px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    width: 100%;
-    max-width: 420px;
-    box-sizing: border-box;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: var(--blanco);
+  border-top: 8px solid var(--rojo);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================================================
    4 · CADA PARTE DE LA TARJETA
    ========================================================= */
 .tarjeta__logo {
-    width: 72px;
-    height: 72px;
-    object-fit: contain;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
 }
 
 .tarjeta__curso {
-    margin: .75rem 0 0;
-    font-size: .78rem;
-    font-weight: 600;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--negro);
+  margin: .75rem 0 0;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--negro);
 }
 
 .tarjeta__nombre {
-    margin: .4rem 0 0;
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    color: var(--rojo-900);
+  margin: .4rem 0 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--rojo-900);
 }
 
 .tarjeta__frase {
-    margin: 1rem 0 0;
-    font-size: 1.25rem;
-    line-height: 1.55;
-    color: var(--rojo-700);
+  margin: 1rem 0 0;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: var(--rojo-700);
 }
 
 .tarjeta__autor {
-    margin: 1.25rem 0 0;
-    font-size: .82rem;
-    color: var(--texto-suave);
+  margin: 1.25rem 0 0;
+  font-size: .82rem;
+  color: var(--texto-suave);
+}
+
+/* Variante oscura: mismo bloque, otra combinación de la paleta */
+.tarjeta--oscura {
+  background: var(--blanco);
+  border-top-color: var(--rojo-300);
+}
+
+.tarjeta__pregunta {
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--rojo-50);
+}
+
+.tarjeta__respuesta {
+  margin: .5rem 0 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--rojo-25);
+}
+
+/* Para que las dos tarjetas se apilen con un hueco entre ellas */
+/*body {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}*/
+
+/* =========================================================
+   EL BOTÓN: por eso existen las pseudo-clases
+   ========================================================= */
+.tarjeta__boton {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: .9rem 2rem;
+  border-radius: 999px;
+  /* 999px = píldora, sirve para botones */
+  background: var(--rojo-300);
+  color: var(--blanco);
+  font-weight: 700;
+  text-decoration: none;
+  /* sin subrayado, es un botón y no un texto */
+}
+
+.tarjeta__boton:hover {
+  background: var(--rojo-25);
+}
+
+.tarjeta__boton:active {
+  background: var(--rojo-oscuro);
+}
+
+/* Accesibilidad: el foco del teclado tiene que verse SIEMPRE */
+.tarjeta__boton:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   LA FICHA DE TU IDEA
+   ========================================================= */
+.ficha {
+  max-width: 520px;
+  margin: var(--e-6) auto;
+  /* 3rem arriba/abajo · auto a los lados = centrada */
+  padding: var(--e-5);
+  /* 2rem de aire adentro */
+  border: 1px solid var(--violeta-200);
+  border-top: 6px solid var(--rojo);
+  border-radius: 12px;
+  background: var(--blanco);
+}
+
+.ficha__etiqueta {
+  margin: 0;
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--rojo-200);
+}
+
+.ficha__titulo {
+  margin: var(--e-2) 0 var(--e-5);
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: var(--rojo-300);
+}
+
+.ficha__campo {
+  margin: var(--e-4) 0 var(--e-1);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--rojo-500);
+}
+
+.ficha__texto {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--texto);
+}
+
+/* las etiquetas: display inline-flex las deja como píldoras */
+.ficha__tags {
+  margin: var(--e-5) 0 0;
+  padding: 0;
+  display: flex;
+  gap: var(--e-2);
+  list-style: none;
+}
+
+.ficha__tags li {
+  padding: var(--e-1) var(--e-3);
+  border-radius: 999px;
+  background: var(--rojo-100);
+  color: var(--blanco);
+  font-size: .8rem;
+}
+
+#idea {
+  background-color: var(--gris);
+  background-image: none;
+  border: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 10px;
+}
+
+
+.container {
+  background-color: var(--gris);
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.ideas {
+  background-color: white;
+  width: 360px;
+  text-align: center;
+  border: 3px solid #d44444;
+  padding: 30px;
+
+}
+
+.ideas__imagen img {
+  width: 90px;
+  height: 90px;
+  padding: 10px;
+
+}
+
+.ideas__titulo {
+  font-size: medium;
+  color: black
+}
+
+.ideas__parrafo {
+  font-size: medium;
+  line-height: 1.55;
+}
+
+.ideas__enlace {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: .9rem 2rem;
+  border-radius: 999px;
+  background: var(--rojo);
+  color: rgb(29, 28, 28);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.ideas__enlace:hover {
+  background: var(--rojo);
+  color: white;
+}
+
+.ideas__enlace:active {
+  background: var(--rojo-50);
+  color: #740000;
+}
+
+.ideas__enlace:focus-visible {
+  outline: 3px solid rgb(161, 63, 63);
+  outline-offset: 3px;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 900;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.lista {
+  margin: var(--e-5) 0 0;
+  padding: 0;
+  display: flex;
+  gap: var(--e-2);
+  list-style: none;
+}
+
+.lista li {
+  padding: var(--e-1) var(--e-3);
+  border-radius: 999px;
+  background: var(--rojo-100);
+  color: var(--blanco);
+  font-size: .8rem;
+}
+
+.lista li {
+  padding: var(--e-1) var(--e-3);
+  border-radius: 999px;
+  background: var(--rojo-100);
+  color: var(--blanco);
+  font-size: .8rem;
+}
+
+.lista li {
+  padding: var(--e-1) var(--e-3);
+  border-radius: 999px;
+  background: var(--rojo-100);
+  color: var(--blanco);
+  font-size: .8rem;
+}
+
+.lista li {
+  padding: var(--e-1) var(--e-3);
+  border-radius: 999px;
+  background: var(--rojo-100);
+  color: var(--blanco);
+  font-size: .8rem;
+}
+
+.container-header {
+  background: #ffc4c4;
+  background: linear-gradient(180deg, rgb(248, 88, 101) 15%, rgba(115, 115, 115, 1) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-logo {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.container-header nav {
+  padding: 10px;
+
+}
+
+.container-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 7px;
+}
+
+.container-header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  /* mayuscula*/
+  color: #590202;
+  font-weight: 800;
+  font-size: 1, 2rem;
+  transition: background-color 0.5s ease;
+}
+
+
+
+.container-header a:hover {
+  background-color: #f5f4f8;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.footer-top {
+  justify-content: space-between;
+  display: flex;
+}
+
+.footer-bottom a {
+  color: #0b090a;
+
+}
+
+.footer-bottom {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 20px;
+  border-top: 3px solid #0b090a;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+footer {
+  background-color: var(--gris);
+  border-width: 20px;
+  margin: 0;
+  padding: 14px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.footer-top-col ul {
+  list-style: none;
+  font-size: larger;
+  padding-left: 0%;
+
+}
+
+h4 {
+  font-size: x-large;
+}
+
+.footer-bottom-legal a {
+  gap: 5px;
+  font-size: 12px;
+}
+
+.footer-top-btn{
+  background-color: white;
+  padding: 8px;
+  padding-bottom: 20px;
+  display: block;
+  text-align: center;
 }
