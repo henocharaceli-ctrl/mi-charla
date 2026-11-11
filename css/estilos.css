@@ -4,12 +4,15 @@
    ========================================================= */
 :root {
   /* Los seis colores de la identidad de River */
-  --gris: #b1a7a6;
-  --rojo: #ba181b;
+  --camel-coat: #c6b39a;
+  --boho: #7b694e;
   --blanco: #ffffff;
   --negro: #0b090a;
+  --rubine: #6d3a3c;
+  --tamarind: #361319;
+  --italian-roast: #;
 
-  /* Escala del violeta */
+  /* Escala del rojo */
   --rojo-900: #2b0000;
   --rojo-800: #4f0000;
   --rojo-700: #740000;
@@ -44,23 +47,27 @@
 body {
   margin: 0;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: var(--gris);
-  background-image: url(./asset/img/monumental.jpg);
+  background: var(--camel-coat);
+  background-color: var(--camel-coat);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 10%;
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   color: var(--texto);
+ 
 }
-
+.desp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 /* =========================================================
    3 · LA TARJETA
    ========================================================= */
 .tarjeta {
   background: var(--blanco);
-  border-top: 8px solid var(--rojo);
+  border-top: 8px solid var(--tamarind);
   border-radius: 12px;
   padding: 2.5rem 2rem;
   text-align: center;
@@ -448,3 +455,4 @@ h4 {
   display: block;
   text-align: center;
 }
+
