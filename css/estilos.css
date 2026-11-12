@@ -67,7 +67,7 @@ body {
    ========================================================= */
 .tarjeta {
   background: var(--blanco);
-  border-top: 8px solid var(--tamarind);
+  border-top: 8px solid var(--texto);
   border-radius: 12px;
   padding: 2.5rem 2rem;
   text-align: center;
@@ -81,8 +81,8 @@ body {
    4 · CADA PARTE DE LA TARJETA
    ========================================================= */
 .tarjeta__logo {
-  width: 72px;
-  height: 72px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
 }
 
@@ -113,7 +113,7 @@ body {
 .tarjeta__autor {
   margin: 1.25rem 0 0;
   font-size: .82rem;
-  color: var(--texto-suave);
+  color: var(--texto);
 }
 
 /* Variante oscura: mismo bloque, otra combinación de la paleta */
@@ -237,7 +237,7 @@ body {
 }
 
 #idea {
-  background-color: var(--gris);
+  
   background-image: none;
   border: 3px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -266,7 +266,7 @@ body {
 }
 
 .ideas__imagen img {
-  width: 90px;
+  width: 98px;
   height: 90px;
   padding: 10px;
 
@@ -287,7 +287,7 @@ body {
   margin-top: 2rem;
   padding: .9rem 2rem;
   border-radius: 999px;
-  background: var(--rojo);
+  background: var(--camel-coat);
   color: rgb(29, 28, 28);
   font-weight: 700;
   text-decoration: none;
@@ -296,7 +296,7 @@ body {
 
 .ideas__enlace:hover {
   background: var(--rojo);
-  color: white;
+  color: rgb(170, 7, 7);
 }
 
 .ideas__enlace:active {
@@ -305,7 +305,7 @@ body {
 }
 
 .ideas__enlace:focus-visible {
-  outline: 3px solid rgb(161, 63, 63);
+  outline: 3px solid rgb(145, 20, 20);
   outline-offset: 3px;
 }
 
@@ -316,12 +316,21 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.lista {
+.lista  {
   margin: var(--e-5) 0 0;
   padding: 0;
   display: flex;
   gap: var(--e-2);
   list-style: none;
+}
+
+.lista ul {
+  list-style: none;
+}
+
+.lista a{
+  text-decoration: none;
+  color: var(--blanco);
 }
 
 .lista li {
@@ -357,8 +366,7 @@ body {
 }
 
 .container-header {
-  background: #ffc4c4;
-  background: linear-gradient(180deg, rgb(248, 88, 101) 15%, rgba(115, 115, 115, 1) 100%);
+  background: var(--boho);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -422,7 +430,7 @@ body {
 }
 
 footer {
-  background-color: var(--gris);
+  background-color: var(--boho);
   border-width: 20px;
   margin: 0;
   padding: 14px;
@@ -455,4 +463,3 @@ h4 {
   display: block;
   text-align: center;
 }
-
