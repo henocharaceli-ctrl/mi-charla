@@ -22,7 +22,8 @@
   --rojo-100: #eb1d1d;
   --rojo-50: #f50f0f;
   --rojo-25: #ff0000;
-
+  --footer-f:#c7a982eb;
+  --tarj: #d7c8b4eb;
   --texto: #9e2a2b;
   --texto-suave: #ad2831;
   --blanco: #ffffff;
@@ -47,8 +48,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--camel-coat);
-  background-color: var(--camel-coat);
+  background-color: var(--boho);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 10%;
@@ -66,7 +66,7 @@ body {
    3 · LA TARJETA
    ========================================================= */
 .tarjeta {
-  background: var(--blanco);
+  background: #d7c8b4eb;
   border-top: 8px solid var(--texto);
   border-radius: 12px;
   padding: 2.5rem 2rem;
@@ -237,8 +237,7 @@ body {
 }
 
 #idea {
-  
-  background-image: none;
+  background-image: url(./asset/img/ftfamilia.jpeg);
   border: 3px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 10px;
@@ -257,7 +256,7 @@ body {
 }
 
 .ideas {
-  background-color: white;
+  background-color: #c7a982eb;
   width: 360px;
   text-align: center;
   border: 3px solid #d44444;
@@ -430,7 +429,7 @@ body {
 }
 
 footer {
-  background-color: var(--boho);
+  background-color: #c7a982eb;
   border-width: 20px;
   margin: 0;
   padding: 14px;
@@ -438,6 +437,7 @@ footer {
 
 footer a {
   text-decoration: none;
+  color: #4e402b;
 }
 
 .footer-top-col ul {
