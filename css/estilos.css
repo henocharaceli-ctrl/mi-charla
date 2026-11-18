@@ -3,16 +3,13 @@
    Se escribe UNA sola vez, acá arriba. Todo lo demás usa var().
    ========================================================= */
 :root {
-  /* Los seis colores de la identidad de River */
+  /* Los colores utilizados en mi pagina */
   --camel-coat: #c6b39a;
   --boho: #7b694e;
   --blanco: #ffffff;
   --negro: #0b090a;
   --rubine: #6d3a3c;
   --tamarind: #361319;
-  --italian-roast: #;
-
-  /* Escala del rojo */
   --rojo-900: #2b0000;
   --rojo-800: #4f0000;
   --rojo-700: #740000;
@@ -22,12 +19,16 @@
   --rojo-100: #eb1d1d;
   --rojo-50: #f50f0f;
   --rojo-25: #ff0000;
-  --footer-f:#c7a982eb;
+  --footer-f: #c7a982eb;
   --tarj: #d7c8b4eb;
   --texto: #9e2a2b;
   --texto-suave: #ad2831;
   --blanco: #ffffff;
   --violeta: var(--fusia);
+  --tarj-osc: #b39e83;
+  --tarj-res: #7a3333;
+  --tarje-pre: #300a0a;
+  --ficha: #6a1a1a;
 
 
   /* la escala de espaciado del curso. Usá estos y ningún otro número. */
@@ -48,26 +49,28 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: var(--boho);
+  background-image: url(./asset/img/ftfamilia.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 10%;
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   color: var(--texto);
- 
+
 }
-.desp{
+
+.desp {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+
 /* =========================================================
    3 · LA TARJETA
    ========================================================= */
 .tarjeta {
   background: #d7c8b4eb;
-  border-top: 8px solid var(--texto);
+  border-top: 8px solid var(--tarj-res);
   border-radius: 12px;
   padding: 2.5rem 2rem;
   text-align: center;
@@ -118,8 +121,8 @@ body {
 
 /* Variante oscura: mismo bloque, otra combinación de la paleta */
 .tarjeta--oscura {
-  background: var(--blanco);
-  border-top-color: var(--rojo-300);
+  background: #b39e83;
+  border-top-color: var(--tarj-res);
 }
 
 .tarjeta__pregunta {
@@ -128,14 +131,14 @@ body {
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--rojo-50);
+  color: #300a0a;
 }
 
 .tarjeta__respuesta {
   margin: .5rem 0 0;
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--rojo-25);
+  color: #7a3333;
 }
 
 /* Para que las dos tarjetas se apilen con un hueco entre ellas */
@@ -154,7 +157,7 @@ body {
   padding: .9rem 2rem;
   border-radius: 999px;
   /* 999px = píldora, sirve para botones */
-  background: var(--rojo-300);
+  background: var(--tarj-res);
   color: var(--blanco);
   font-weight: 700;
   text-decoration: none;
@@ -162,7 +165,7 @@ body {
 }
 
 .tarjeta__boton:hover {
-  background: var(--rojo-25);
+  background: var(--tamarind);
 }
 
 .tarjeta__boton:active {
@@ -187,7 +190,7 @@ body {
   border: 1px solid var(--violeta-200);
   border-top: 6px solid var(--rojo);
   border-radius: 12px;
-  background: var(--blanco);
+  background: #b39e83;
 }
 
 .ficha__etiqueta {
@@ -195,14 +198,14 @@ body {
   font-size: .75rem;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--rojo-200);
+  color: var(--tarj-res);
 }
 
 .ficha__titulo {
   margin: var(--e-2) 0 var(--e-5);
   font-size: 1.6rem;
   line-height: 1.25;
-  color: var(--rojo-300);
+  color: var(--tarj-res);
 }
 
 .ficha__campo {
@@ -210,13 +213,13 @@ body {
   font-size: .72rem;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--rojo-500);
+  color: var(--rojo-700);
 }
 
 .ficha__texto {
   margin: 0;
   line-height: 1.65;
-  color: var(--texto);
+  color: var(--ficha);
 }
 
 /* las etiquetas: display inline-flex las deja como píldoras */
@@ -231,7 +234,7 @@ body {
 .ficha__tags li {
   padding: var(--e-1) var(--e-3);
   border-radius: 999px;
-  background: var(--rojo-100);
+  background: var(--rubine);
   color: var(--blanco);
   font-size: .8rem;
 }
@@ -315,7 +318,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.lista  {
+.lista {
   margin: var(--e-5) 0 0;
   padding: 0;
   display: flex;
@@ -327,7 +330,7 @@ body {
   list-style: none;
 }
 
-.lista a{
+.lista a {
   text-decoration: none;
   color: var(--blanco);
 }
@@ -393,18 +396,10 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   /* mayuscula*/
-  color: #590202;
+  color: var(--rojo-800);
   font-weight: 800;
   font-size: 1, 2rem;
   transition: background-color 0.5s ease;
-}
-
-
-
-.container-header a:hover {
-  background-color: #f5f4f8;
-  padding: 5px;
-  border-radius: 8px;
 }
 
 .footer-top {
@@ -453,13 +448,34 @@ h4 {
 
 .footer-bottom-legal a {
   gap: 5px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
-.footer-top-btn{
+.footer-bottom-legal ul{
+  list-style: none;
+}
+
+.footer-top-btn {
   background-color: white;
   padding: 8px;
-  padding-bottom: 9px;
+  padding-bottom: 8px;
   display: block;
   text-align: center;
+  border-radius: 8px;
+  font-size: 15px;
+  margin: 10px;
+}
+
+.footer-phrase-cards ul {
+  list-style: none;
+}
+
+#phrase {
+  font-size: 25px;
+  color: var(--rojo-700);
+}
+
+#autor {
+  font-size: 20px;
+  color: var(--rojo-800);
 }
