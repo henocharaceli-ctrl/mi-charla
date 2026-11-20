@@ -46,6 +46,8 @@
    display:flex + justify-content:center centran la tarjeta
    en pantalla sin usar márgenes a ojo.
    ========================================================= */
+
+/* Configuración general de la página */
 body {
   margin: 0;
   min-height: 100vh;
@@ -58,6 +60,7 @@ body {
 
 }
 
+/* Organiza y centra los elementos dentro de la página */
 .desp {
   display: flex;
   justify-content: center;
@@ -68,6 +71,8 @@ body {
 /* =========================================================
    3 · LA TARJETA
    ========================================================= */
+
+/* Define el diseño general de la tarjeta de presentación */
 .tarjeta {
   background: #d7c8b4eb;
   border-top: 8px solid var(--tarj-res);
@@ -83,12 +88,15 @@ body {
 /* =========================================================
    4 · CADA PARTE DE LA TARJETA
    ========================================================= */
+
+/* Establece el tamaño del logo y cómo se adapta a su espacio */
 .tarjeta__logo {
   width: 130px;
   height: 130px;
   object-fit: contain;
 }
 
+/* Da formato al texto que indica el curso */
 .tarjeta__curso {
   margin: .75rem 0 0;
   font-size: .78rem;
@@ -98,6 +106,7 @@ body {
   color: var(--negro);
 }
 
+/* Destaca el nombre mediante su tamaño, grosor y color */
 .tarjeta__nombre {
   margin: .4rem 0 0;
   font-size: 2.2rem;
@@ -106,6 +115,7 @@ body {
   color: var(--rojo-900);
 }
 
+/* Da formato a la frase que aparece dentro de la tarjeta */
 .tarjeta__frase {
   margin: 1rem 0 0;
   font-size: 1.25rem;
@@ -113,6 +123,7 @@ body {
   color: var(--rojo-700);
 }
 
+/* Establece el formato del texto que indica el autor de la frase */
 .tarjeta__autor {
   margin: 1.25rem 0 0;
   font-size: .82rem;
@@ -125,6 +136,7 @@ body {
   border-top-color: var(--tarj-res);
 }
 
+/* Da formato a la pregunta que aparece dentro de la tarjeta */
 .tarjeta__pregunta {
   margin: 0;
   font-size: .8rem;
@@ -134,6 +146,7 @@ body {
   color: #300a0a;
 }
 
+/* Da formato a la respuesta mediante su grosor, color y tamaño */
 .tarjeta__respuesta {
   margin: .5rem 0 0;
   font-size: 1.4rem;
@@ -151,6 +164,8 @@ body {
 /* =========================================================
    EL BOTÓN: por eso existen las pseudo-clases
    ========================================================= */
+
+/* Da formato al enlace para que tenga apariencia de botón */
 .tarjeta__boton {
   display: inline-block;
   margin-top: 2rem;
@@ -164,10 +179,12 @@ body {
   /* sin subrayado, es un botón y no un texto */
 }
 
+/* Cambia el fondo del botón cuando el cursor pasa por encima */
 .tarjeta__boton:hover {
   background: var(--tamarind);
 }
 
+/* Cambia el fondo del botón mientras se hace clic */
 .tarjeta__boton:active {
   background: var(--rojo-oscuro);
 }
@@ -181,6 +198,8 @@ body {
 /* =========================================================
    LA FICHA DE TU IDEA
    ========================================================= */
+
+   /* Define el contenedor principal de la ficha */
 .ficha {
   max-width: 520px;
   margin: var(--e-6) auto;
@@ -193,6 +212,7 @@ body {
   background: #b39e83;
 }
 
+/* Da formato a la etiqueta que aparece en la ficha */
 .ficha__etiqueta {
   margin: 0;
   font-size: .75rem;
@@ -201,6 +221,7 @@ body {
   color: var(--tarj-res);
 }
 
+/* Establece el tamaño, separación y color del título de la ficha */
 .ficha__titulo {
   margin: var(--e-2) 0 var(--e-5);
   font-size: 1.6rem;
@@ -208,6 +229,7 @@ body {
   color: var(--tarj-res);
 }
 
+/* Da formato a los nombres de los campos de información */
 .ficha__campo {
   margin: var(--e-4) 0 var(--e-1);
   font-size: .72rem;
@@ -216,6 +238,7 @@ body {
   color: var(--rojo-700);
 }
 
+/* Establece la apariencia de los textos descriptivos de la ficha */
 .ficha__texto {
   margin: 0;
   line-height: 1.65;
@@ -223,6 +246,7 @@ body {
 }
 
 /* las etiquetas: display inline-flex las deja como píldoras */
+/* Organiza las etiquetas de la ficha en una misma fila */
 .ficha__tags {
   margin: var(--e-5) 0 0;
   padding: 0;
@@ -231,6 +255,7 @@ body {
   list-style: none;
 }
 
+/* Da formato individual a cada etiqueta de la lista */
 .ficha__tags li {
   padding: var(--e-1) var(--e-3);
   border-radius: 999px;
@@ -239,14 +264,15 @@ body {
   font-size: .8rem;
 }
 
+/* Modifica el fondo, los bordes y la tipografía del elemento identificado como idea */
 #idea {
   background-image: url(./asset/img/ftfamilia.jpeg);
-  border: 3px;
+  border:  3px solid black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 10px;
 }
 
-
+/* Contenedor general que organiza las tarjetas y permite que pasen a otra fila */
 .container {
   background-color: var(--gris);
   max-width: 1000px;
@@ -258,6 +284,7 @@ body {
   padding: 10px;
 }
 
+/* Define el diseño de cada tarjeta de ideas */
 .ideas {
   background-color: #c7a982eb;
   width: 360px;
@@ -267,6 +294,7 @@ body {
 
 }
 
+/* Establece el tamaño y el espacio interno de las imágenes de las tarjetas */
 .ideas__imagen img {
   width: 98px;
   height: 90px;
@@ -274,16 +302,19 @@ body {
 
 }
 
+/* Modifica el tamaño y el color de los títulos de las tarjetas */
 .ideas__titulo {
   font-size: medium;
   color: black
 }
 
+/* Establece el tamaño del texto y la separación entre sus líneas */
 .ideas__parrafo {
   font-size: medium;
   line-height: 1.55;
 }
 
+/* Da apariencia de botón a los enlaces de las tarjetas */
 .ideas__enlace {
   display: inline-block;
   margin-top: 2rem;
@@ -296,21 +327,25 @@ body {
   text-transform: uppercase;
 }
 
+/* Cambia los colores del enlace cuando el cursor pasa por encima */
 .ideas__enlace:hover {
   background: var(--rojo);
   color: rgb(170, 7, 7);
 }
 
+/* Cambia los colores del enlace mientras se hace clic */
 .ideas__enlace:active {
   background: var(--rojo-50);
   color: #740000;
 }
 
+/* Muestra un contorno cuando el enlace recibe el foco del teclado */
 .ideas__enlace:focus-visible {
   outline: 3px solid rgb(145, 20, 20);
   outline-offset: 3px;
 }
 
+/* Establece la apariencia de los títulos principales de la página */
 .titulo {
   text-align: center;
   font-size: 70px;
@@ -318,6 +353,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Organiza los elementos de la lista en una misma fila */
 .lista {
   margin: var(--e-5) 0 0;
   padding: 0;
@@ -326,15 +362,18 @@ body {
   list-style: none;
 }
 
+/* Quita los marcadores de las listas que están dentro de .lista */
 .lista ul {
   list-style: none;
 }
 
+/* Modifica la apariencia de los enlaces que están dentro de la lista */
 .lista a {
   text-decoration: none;
   color: var(--blanco);
 }
 
+/* Da formato a cada elemento de la lista */
 .lista li {
   padding: var(--e-1) var(--e-3);
   border-radius: 999px;
@@ -343,30 +382,7 @@ body {
   font-size: .8rem;
 }
 
-.lista li {
-  padding: var(--e-1) var(--e-3);
-  border-radius: 999px;
-  background: var(--rojo-100);
-  color: var(--blanco);
-  font-size: .8rem;
-}
-
-.lista li {
-  padding: var(--e-1) var(--e-3);
-  border-radius: 999px;
-  background: var(--rojo-100);
-  color: var(--blanco);
-  font-size: .8rem;
-}
-
-.lista li {
-  padding: var(--e-1) var(--e-3);
-  border-radius: 999px;
-  background: var(--rojo-100);
-  color: var(--blanco);
-  font-size: .8rem;
-}
-
+/* Define el fondo y organiza los elementos del encabezado */
 .container-header {
   background: var(--boho);
   display: flex;
@@ -374,6 +390,7 @@ body {
   align-items: center;
 }
 
+/* Establece el tamaño y la apariencia de la imagen del logo */
 .img-logo {
   width: 150px;
   height: 150px;
@@ -381,37 +398,43 @@ body {
   border-radius: 30px;
 }
 
+/* Establece el espacio interno de la sección de navegación */
 .container-header nav {
   padding: 10px;
 
 }
 
+/* Organiza horizontalmente los enlaces de navegación y quita los marcadores */
 .container-header nav ul {
   list-style: none;
   display: flex;
   gap: 7px;
 }
 
+/* Modifica la apariencia de los enlaces del encabezado */
 .container-header a {
   text-decoration: none;
   text-transform: uppercase;
   /* mayuscula*/
   color: var(--rojo-800);
   font-weight: 800;
-  font-size: 1, 2rem;
+  font-size: 1.2rem;
   transition: background-color 0.5s ease;
 }
 
+/* Organiza los elementos de la parte superior del pie de página */
 .footer-top {
   justify-content: space-between;
   display: flex;
 }
 
+/* Establece el color de los enlaces de la parte inferior del footer */
 .footer-bottom a {
   color: #0b090a;
 
 }
 
+/* Organiza los elementos de la parte inferior del footer */
 .footer-bottom {
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
@@ -423,18 +446,21 @@ body {
 
 }
 
-footer {
+/* Define el fondo y el espacio interno general del pie de página */
+.footer {
   background-color: #c7a982eb;
   border-width: 20px;
   margin: 0;
   padding: 14px;
 }
 
-footer a {
+/* Modifica la apariencia de los enlaces del pie de página */
+.footer a {
   text-decoration: none;
   color: #4e402b;
 }
 
+/* Da formato a las listas de las columnas superiores del footer */
 .footer-top-col ul {
   list-style: none;
   font-size: larger;
@@ -442,19 +468,24 @@ footer a {
 
 }
 
+/*Centra los titulos de las columnas del footer y modifica su tamaño*/
 h4 {
   font-size: x-large;
+  text-align: center;
 }
 
+/* Establece el tamaño de letra y el espacio entre los enlaces legales */
 .footer-bottom-legal a {
-  gap: 5px;
+  
   font-size: 15px;
 }
 
-.footer-bottom-legal ul{
+/* Quita los marcadores de la lista de enlaces legales */
+.footer-bottom-legal ul {
   list-style: none;
 }
 
+/* Da formato al botón ubicado en la parte superior del footer */
 .footer-top-btn {
   background-color: white;
   padding: 8px;
@@ -466,16 +497,54 @@ h4 {
   margin: 10px;
 }
 
+/* Quita los marcadores de la lista que contiene la frase y su autor */
 .footer-phrase-cards ul {
   list-style: none;
 }
 
+/* Modifica el tamaño y el color de la frase del footer */
 #phrase {
   font-size: 25px;
   color: var(--rojo-700);
 }
 
+/* Modifica el tamaño y el color del autor de la frase */
 #autor {
   font-size: 20px;
   color: var(--rojo-800);
+}
+
+/* Modifica el fondo del elemento identificado como ideap y elimina su imagen de fondo */
+#ideap {
+  background-color: #4e402b;
+  background-image: none;
+}
+
+/* Define el contenedor principal de la página, centrando su contenido y estableciendo su fondo y ancho */
+.container-principal {
+  margin: 0 auto;
+  background-color: #7a3333;
+  width: 1250px;
+}
+
+/* Define el diseño del bloque principal, organizando sus elementos y estableciendo su fondo, tamaño y borde */
+.pag-princ {
+  background-color: #b39e83;
+  width: 100%;
+  text-align: center;
+  border: 3px solid #c6b39a;
+  padding: 30px;
+  display: flex;
+}
+
+/* Da formato al párrafo principal, estableciendo su color, tipografía, tamaño y borde izquierdo */
+.parrafo-princ {
+  color: var(--ficha);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /*estilo de fuente*/
+  font-size: large;
+  /*tamaño de fuente*/
+  border-left: #b50000 6px solid;
+  /*borde a la izquierda del parrafo*/
+
 }
