@@ -197,7 +197,7 @@ body {
   padding: var(--e-5);
   /* 2rem de aire adentro */
   border: 1px solid var(--tarj-res);
-  border-top: 6px solid var(--rojo);
+  border-top: 6px solid var(--tarj-res);
   border-radius: 12px;
   background: #b39e83;
 }
@@ -266,7 +266,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  gap: 25px;
+  gap: 25px; /*separa*/
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px;
@@ -277,7 +277,6 @@ body {
   background-color: #c7a982eb;
   width: 360px;
   text-align: center;
-  border: 3px solid #d44444;
   padding: 30px;
 
 }
@@ -315,18 +314,18 @@ body {
   text-transform: uppercase;
 }
 
+
 .ideas__enlace:hover {
-  background: var(--rojo);
-  color: rgb(170, 7, 7);
+  background: var(--rubine);
+ 
 }
 
 .ideas__enlace:active {
-  background: var(--rojo-50);
-  color: #740000;
+  background: var(--tamarind);
 }
 
 .ideas__enlace:focus-visible {
-  outline: 3px solid rgb(145, 20, 20);
+  outline: 3px solid #ffffff;
   outline-offset: 3px;
 }
 
@@ -447,6 +446,7 @@ footer a {
 /*estilo a los titulos en h4*/
 h4 {
   font-size: x-large;
+  text-align: center;
 }
 
 /*estilo a los botones del pie de página*/
