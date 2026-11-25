@@ -257,14 +257,12 @@ body {
 /*identifica un elemento relacionado con la idea*/
 #idea {
   background-image: url(./asset/img/ftfamilia.jpeg);
-  border: 3px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 10px;
 }
 
 /*organiza el contenido de la patgina*/
 .container {
-  background-color: var(--gris);
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -411,10 +409,7 @@ body {
   display: flex;
 }
 
-/*estilo a los enlaces de la parte inferior del footer*/
-.footer-bottom a {
-  color: #0b090a;
-}
+
 
 /*organiza la parte inferior del pie de página*/
 .footer-bottom {
